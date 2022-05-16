@@ -19,20 +19,20 @@ const LoginPage = () => {
             <div className="card-body">
               <div className="form">
                 <div className="form-group mt-1">
-                  <label htmlFor="" className="fw-bold">
+                  <label htmlFor="" className="font-weight-bold">
                     Usuario
                   </label>
                   <input type="text" className="form-control" placeholder="Usuario" />
                 </div>
 
                 <div className="form-group mt-3">
-                  <label htmlFor="" className="fw-bold">
+                  <label htmlFor="" className="font-weight-bold">
                     Contraseña
                   </label>
                   <input type="text" className="form-control" placeholder="Contraseña" />
                 </div>
 
-                <div className="text-end mt-3">
+                <div className="text-right mt-3">
                   <input type="submit" value="Ingresar" className="btn btn-danger" onClick={() => navigate('/')} />
                 </div>
               </div>

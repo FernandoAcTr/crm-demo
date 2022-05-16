@@ -2,26 +2,26 @@
 
 /* === Plugin styles === */
 
-@import "../../../node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
-@import "../../../node_modules/nouislider/distribute/nouislider.min.css";
-@import '../../../node_modules/react-bootstrap-typeahead/css/Typeahead.css';
-@import '../../../node_modules/react-bootstrap-typeahead/css/Typeahead-bs4.css';
-@import '../../../node_modules/react-datepicker/dist/react-datepicker.css';
+@import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
+@import "nouislider/distribute/nouislider.min.css";
+@import 'react-bootstrap-typeahead/css/Typeahead.css';
+@import 'react-bootstrap-typeahead/css/Typeahead-bs4.css';
+@import 'react-datepicker/dist/react-datepicker.css';
 
 
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 @import "./variables";
-@import "../../../node_modules/compass-mixins/lib/compass";
-@import "../../../node_modules/compass-mixins/lib/animate";
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "compass-mixins/lib/compass";
+@import "compass-mixins/lib/animate";
+@import "bootstrap/scss/bootstrap";
 @import "./fonts";
 @import "./functions";
 
 /* === Icon fonts === */
-@import "../../../node_modules/@mdi/font/scss/materialdesignicons";
+@import "@mdi/font/scss/materialdesignicons";
 
 
 /* === Template mixins === */
