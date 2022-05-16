@@ -1,0 +1,12 @@
+.topbar {
+  height: 20vh;
+  background-color: #2b4787;
+}
+.topbar img {
+  height: 20vh;
+}
+.login-card .card-header {
+  background-color: #2b4787;
+  color: white;
+  text-align: center;
+}
