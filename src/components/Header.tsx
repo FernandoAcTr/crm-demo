@@ -1,19 +1,14 @@
 import { Link } from 'react-router-dom'
+import { useUIContext } from '@context/UIProvider'
 
 const Header = () => {
-  const handleToggleMenuSidebar = () => {
-    //TODO implement toggle
-  }
+  const { toggleSidebar } = useUIContext()
 
   return (
     <nav className="main-header navbar navbar-expand navbar-white navbar-light">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <button
-            // onClick={handleToggleMenuSidebar}
-            type="button"
-            className="nav-link"
-          >
+          <button onClick={() => toggleSidebar()} type="button" className="nav-link">
             <i className="fas fa-bars" />
           </button>
         </li>

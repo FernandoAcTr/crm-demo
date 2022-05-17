@@ -8,6 +8,10 @@
 
 @import 'react-toastify/dist/ReactToastify.min.css';
 
+img {
+  max-width: 100%;
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -20,6 +24,15 @@
   cursor: pointer;
 }
 
-img {
-  max-width: 100%;
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+.user-panel img {
+  width: 2.1rem !important;
+  max-width: unset;
+}
+
+.sidebar-collapse .nav-link i.right {
+  display: none;
 }
