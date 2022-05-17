@@ -5,9 +5,7 @@ import { useAuthContext } from '../context/AuthProvider'
 const PublicRoute = () => {
   const { isLoggedIn } = useAuthContext()
 
-  const isAuthenticated = isLoggedIn || localStorage.getItem('token')
-
-  return isAuthenticated ? <Navigate to="/" /> : <Outlet />
+  return isLoggedIn ? <Navigate to="/" /> : <Outlet />
 }
 
 export default PublicRoute
