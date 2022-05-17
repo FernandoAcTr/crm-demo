@@ -36,3 +36,18 @@ nav::-webkit-scrollbar {
 .sidebar-collapse .nav-link i.right {
   display: none;
 }
+
+.navbar {
+  padding: 0 0.5rem;
+}
+
+.navbar button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0;
+  margin: 0 0.2rem;
+}
+
+.navbar button:hover {
+  background-color: #e1e1e1
+}

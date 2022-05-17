@@ -23,7 +23,11 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <ul className="navbar-nav ml-auto">{/* AQUI VAN LOS MÓDULOS */}</ul>
+      <ul className="navbar-nav ml-auto">
+        <button className="btn btn-transparent">Servicios</button>
+        <button className="btn btn-transparent">072</button>
+        <button className="btn btn-transparent">Bitácora</button>
+      </ul>
     </nav>
   )
 }
