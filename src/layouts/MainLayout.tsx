@@ -7,7 +7,7 @@ import Footer from '@components/Footer'
 import { addWindowClass, removeWindowClass } from '@utils/helpers'
 
 const MainLayout = () => {
-  const { isSidebarCollapsed } = useUIContext()
+  const { isSidebarCollapsed, toggleSidebar } = useUIContext()
 
   useEffect(() => {
     removeWindowClass('register-page')
@@ -45,6 +45,7 @@ const MainLayout = () => {
         </div>
 
         <Footer />
+        <div id="sidebar-overlay" role="presentation" onClick={() => toggleSidebar()} onKeyDown={() => {}} />
       </div>
     </>
   )
