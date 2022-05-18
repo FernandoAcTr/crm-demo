@@ -45,6 +45,7 @@ nav::-webkit-scrollbar {
 
 .navbar {
   padding: 0 0.5rem;
+  overflow-x: scroll;
 }
 
 .navbar button {
