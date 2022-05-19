@@ -9,8 +9,8 @@ const LoginPage = () => {
   const { doLogIn } = useAuthContext()
   const navigate = useNavigate()
 
-  const [user, setUser] = useState('')
-  const [password, setPassword] = useState('')
+  const [user, setUser] = useState('USUFER')
+  const [password, setPassword] = useState('USUFER')
   const [error, setError] = useState<any>(null)
 
   const handleSubmit = (e) => {

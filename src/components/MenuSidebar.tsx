@@ -26,6 +26,15 @@ export const MENU: IMenuItem[] = [
       },
     ],
   },
+  {
+    name: 'Ejemplos',
+    children: [
+      {
+        name: 'Datatables',
+        path: '/datatables',
+      },
+    ],
+  },
 ]
 
 const MenuSidebar = () => {

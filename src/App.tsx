@@ -4,6 +4,7 @@ import LoginPage from './modules/login/LoginPage'
 import HomePage from './modules/home/HomePage'
 import PublicRoute from './components/PublicRoute'
 import PrivateRoute from './components/PrivateRoute'
+import DatatablePage from './modules/ejemplos/DatatablePage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />}></Route>
+            <Route path="/datatables" element={<DatatablePage />}></Route>
           </Route>
         </Route>
       </Routes>

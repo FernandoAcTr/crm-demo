@@ -8,7 +8,7 @@ interface UIProvider {
 const UIContext = createContext<UIProvider | null>(null)
 
 export const UIProvider = ({ children }) => {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true)
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed)

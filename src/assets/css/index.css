@@ -30,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-nav::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
