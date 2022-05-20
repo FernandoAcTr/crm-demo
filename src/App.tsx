@@ -5,6 +5,7 @@ import HomePage from './modules/home/HomePage'
 import PublicRoute from './components/PublicRoute'
 import PrivateRoute from './components/PrivateRoute'
 import DatatablePage from './modules/ejemplos/DatatablePage'
+import InfiniteScroll from './modules/ejemplos/InfiniteScroll'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />}></Route>
             <Route path="/datatables" element={<DatatablePage />}></Route>
+            <Route path="/infinite" element={<InfiniteScroll />}></Route>
           </Route>
         </Route>
       </Routes>

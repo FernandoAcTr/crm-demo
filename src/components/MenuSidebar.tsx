@@ -33,6 +33,10 @@ export const MENU: IMenuItem[] = [
         name: 'Datatables',
         path: '/datatables',
       },
+      {
+        name: 'Infinite Scroll',
+        path: '/infinite',
+      },
     ],
   },
 ]

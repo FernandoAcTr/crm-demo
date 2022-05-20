@@ -42,6 +42,7 @@ const LoginPage = () => {
                     className="form-control"
                     placeholder="Usuario"
                     onChange={(e) => setUser(e.target.value)}
+                    value={user}
                   />
                 </div>
 
@@ -54,6 +55,7 @@ const LoginPage = () => {
                     className="form-control"
                     placeholder="Contraseña"
                     onChange={(e) => setPassword(e.target.value)}
+                    value={password}
                   />
                 </div>
 
