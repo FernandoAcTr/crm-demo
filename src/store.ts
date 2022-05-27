@@ -5,9 +5,11 @@ import thunk from 'redux-thunk'
 
 //Reducers
 import auth from '@globals/state/auth/auth.reducer'
+import ui from '@globals/state/ui/ui.reducer'
 
 const reducer = combineReducers({
   auth,
+  ui,
 })
 
 export const store = configureStore({

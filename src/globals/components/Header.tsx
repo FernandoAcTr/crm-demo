@@ -1,8 +1,11 @@
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { useUIContext } from '../context/UIProvider'
+import { bindActionCreators } from 'redux'
+import { uiCreators } from '@globals/state'
 
 const Header = () => {
-  const { toggleSidebar } = useUIContext()
+  const dispatch = useDispatch()
+  const { toggleSidebar } = bindActionCreators(uiCreators, dispatch)
 
   return (
     <nav className="main-header navbar navbar-expand navbar-white navbar-light">

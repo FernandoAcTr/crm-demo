@@ -1,13 +1,18 @@
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { useUIContext } from '@globals/context/UIProvider'
 import Header from '@globals/components/Header'
-import MenuSidebar from '@globals/components/MenuSidebar'
+import Drawer from '@globals/components/Drawer'
 import Footer from '@globals/components/Footer'
 import { addWindowClass, removeWindowClass } from '@utils/helpers'
+import { useDispatch, useSelector } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { uiCreators } from '@globals/state'
+import { State } from '@src/store'
 
 const MainLayout = () => {
-  const { isSidebarCollapsed, toggleSidebar } = useUIContext()
+  const dispatch = useDispatch()
+  const { toggleSidebar } = bindActionCreators(uiCreators, dispatch)
+  const { isSidebarCollapsed } = useSelector((state: State) => state.ui)
 
   useEffect(() => {
     removeWindowClass('register-page')
@@ -36,7 +41,7 @@ const MainLayout = () => {
     <>
       <div className="wrapper">
         <Header />
-        <MenuSidebar />
+        <Drawer />
         <div className="content-wrapper">
           <div className="pt-3" />
           <section className="content">

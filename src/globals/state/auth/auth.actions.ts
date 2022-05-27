@@ -1,4 +1,3 @@
-import { AuthServices } from '@src/src/services'
 import { ActionTypes } from './auth.types'
 
 interface LoginAction {

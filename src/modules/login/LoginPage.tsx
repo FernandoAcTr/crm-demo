@@ -1,6 +1,5 @@
 import './Login.css'
 import Logo from '@assets/img/logo.png'
-import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Alert } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
@@ -10,8 +9,6 @@ import { authCreators } from '@globals/state'
 const LoginPage = () => {
   const dispatch = useDispatch()
   const { doLogIn } = bindActionCreators(authCreators, dispatch)
-
-  const navigate = useNavigate()
 
   const [user, setUser] = useState('USUFER')
   const [password, setPassword] = useState('USUFER')
