@@ -2,13 +2,11 @@ import './Login.css'
 import Logo from '@assets/img/logo.png'
 import { useState } from 'react'
 import { Alert } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { authCreators } from '@globals/state'
+import { authCreators } from '@globals/state/auth/auth.creators'
+import { useBindCreators } from '@globals/hooks/useBindCreators'
 
 const LoginPage = () => {
-  const dispatch = useDispatch()
-  const { doLogIn } = bindActionCreators(authCreators, dispatch)
+  const { doLogIn } = useBindCreators(authCreators)
 
   const [user, setUser] = useState('USUFER')
   const [password, setPassword] = useState('USUFER')

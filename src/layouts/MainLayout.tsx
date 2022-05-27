@@ -4,14 +4,14 @@ import Header from '@globals/components/Header'
 import Drawer from '@globals/components/Drawer'
 import Footer from '@globals/components/Footer'
 import { addWindowClass, removeWindowClass } from '@utils/helpers'
-import { useDispatch, useSelector } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { uiCreators } from '@globals/state'
+import { useSelector } from 'react-redux'
+import { uiCreators } from '@globals/state/ui/ui.creators'
 import { State } from '@src/store'
+import { useBindCreators } from '@globals/hooks/useBindCreators'
 
 const MainLayout = () => {
-  const dispatch = useDispatch()
-  const { toggleSidebar } = bindActionCreators(uiCreators, dispatch)
+  const { toggleSidebar } = useBindCreators(uiCreators)
+
   const { isSidebarCollapsed } = useSelector((state: State) => state.ui)
 
   useEffect(() => {

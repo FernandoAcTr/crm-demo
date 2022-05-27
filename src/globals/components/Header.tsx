@@ -1,11 +1,9 @@
-import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { bindActionCreators } from 'redux'
-import { uiCreators } from '@globals/state'
+import { uiCreators } from '@globals/state/ui/ui.creators'
+import { useBindCreators } from '@globals/hooks/useBindCreators'
 
 const Header = () => {
-  const dispatch = useDispatch()
-  const { toggleSidebar } = bindActionCreators(uiCreators, dispatch)
+  const { toggleSidebar } = useBindCreators(uiCreators)
 
   return (
     <nav className="main-header navbar navbar-expand navbar-white navbar-light">
