@@ -18,14 +18,13 @@
     "rootDir": "./src",
     "noImplicitAny": false,
     "paths": {
-      "@src/*": ["./*"],
-      "@components/*": ["./src/components/*"],
+      "@src/*": ["./src/*"],
+      "@globals/*": ["./src/globals/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@plugins/*": ["./src/plugins/*"],
       "@services/*": ["./src/services/*"],
-      "@context/*": ["./src/context/*"],
       "@utils/*": ["./src/utils/*"],
-      "@modules/*": ["./src/modules/*"]
+      "@modules/*": ["./src/modules/*"],
     }
   },
   "include": ["src"],

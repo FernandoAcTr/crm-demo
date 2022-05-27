@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useUIContext } from '@context/UIProvider'
+import { useUIContext } from '../context/UIProvider'
 
 const Header = () => {
   const { toggleSidebar } = useUIContext()

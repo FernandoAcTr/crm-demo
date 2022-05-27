@@ -1,12 +1,16 @@
 import './Login.css'
 import Logo from '@assets/img/logo.png'
 import { useNavigate } from 'react-router-dom'
-import { useAuthContext } from '../../context/AuthProvider'
 import { useState } from 'react'
 import { Alert } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { authCreators } from '@globals/state'
 
 const LoginPage = () => {
-  const { doLogIn } = useAuthContext()
+  const dispatch = useDispatch()
+  const { doLogIn } = bindActionCreators(authCreators, dispatch)
+
   const navigate = useNavigate()
 
   const [user, setUser] = useState('USUFER')
@@ -15,7 +19,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    doLogIn(user, password).catch(() => setError({ message: 'Credenciales Incorrectas' }))
+    doLogIn(user, password)
   }
 
   return (

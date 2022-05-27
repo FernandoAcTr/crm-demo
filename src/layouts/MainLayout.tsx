@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { useUIContext } from '@context/UIProvider'
-import Header from '@components/Header'
-import MenuSidebar from '@components/MenuSidebar'
-import Footer from '@components/Footer'
+import { useUIContext } from '@globals/context/UIProvider'
+import Header from '@globals/components/Header'
+import MenuSidebar from '@globals/components/MenuSidebar'
+import Footer from '@globals/components/Footer'
 import { addWindowClass, removeWindowClass } from '@utils/helpers'
 
 const MainLayout = () => {

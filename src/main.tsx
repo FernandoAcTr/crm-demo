@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import { UIProvider } from './context/UIProvider'
-import { AuthProvider } from './context/AuthProvider'
+import { Provider } from 'react-redux'
+import { store } from './store'
+import { UIProvider } from './globals/context/UIProvider'
 
 //PrimeReact
 import 'primereact/resources/primereact.min.css'
@@ -17,10 +18,10 @@ import './assets/css/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AuthProvider>
-      <UIProvider>
+    <UIProvider>
+      <Provider store={store}>
         <App />
-      </UIProvider>
-    </AuthProvider>
+      </Provider>
+    </UIProvider>
   </React.StrictMode>
 )
