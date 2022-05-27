@@ -13,10 +13,18 @@ const LoginPage = () => {
   const [user, setUser] = useState('USUFER')
   const [password, setPassword] = useState('USUFER')
   const [error, setError] = useState<any>(null)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    doLogIn(user, password)
+    setLoading(true)
+    try {
+      await doLogIn(user, password)
+    } catch (error) {
+      console.log(error)
+      setError({ message: 'Credenciales Incorrectas' })
+    }
+    setLoading(false)
   }
 
   return (
@@ -61,7 +69,7 @@ const LoginPage = () => {
                 </div>
 
                 <div className="text-end mt-3">
-                  <input type="submit" value="Ingresar" className="btn btn-danger" />
+                  {loading ? 'Cargando' : <input type="submit" value="Ingresar" className="btn btn-danger" />}
                 </div>
               </form>
             </div>
